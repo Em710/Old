@@ -30,13 +30,8 @@ import base64
 import subprocess
 from concurrent.futures import ThreadPoolExecutor
 
-def runtxt(z):
-    for e in z + "\n":
-        sys.stdout.write(e)
-        sys.stdout.flush()
-        time.sleep(0.03)
 
-banner = """
+logo = """
 \033[1;37;1m╭━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━╮
 \033[1;35;1m╰━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╯
   
@@ -428,5 +423,5 @@ if len(sys.argv) == 2:
 	else:
 		timer()
 
-#try:timer()
-#except Exception as e:exit(str(e))
+try:timer()
+except Exception as e:exit(str(e))
